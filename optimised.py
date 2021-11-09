@@ -14,7 +14,10 @@ def find_triples(max):
     bResults = []
     cResults = []
     for a in range(2, max):
-        for b in range(int(a/2) - (a/4), max):
+        for b in range(a, max):
+            if a > b:
+                continue
+
             c = math.sqrt((a ** 2) + (b ** 2))
             if c % 1 == 0:
                 aResults.append(a)

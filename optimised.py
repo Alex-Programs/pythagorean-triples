@@ -32,6 +32,7 @@ aResults, cResults = find_triples(max)
 end = time.time()
 
 print(str(1000 * (end - start)) + " milliseconds")
+print(f"Found {str(len(cResults))} triples")
 
 xpoints = np.array(aResults)
 ypoints = np.array(cResults)
